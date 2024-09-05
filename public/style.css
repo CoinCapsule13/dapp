@@ -1,0 +1,177 @@
+/* Define basic color variables */
+:root {
+    --color-black: #000000;
+    --color-red: #FF0000;
+    --color-yellow: #FFFF00;
+    --color-white: #FFFFFF;
+    --color-gray-light: #F4F4F4;
+    --color-gray-dark: #333333;
+    --color-blue: #007bff;
+    --color-blue-dark: #0056b3;
+    --color-light-gray: #e0e0e0;
+    --color-dark-gray: #444444;
+}
+
+/* Import the Permanent Marker font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* Apply the Permanent Marker font and set basic styles */
+body {
+    font-family: 'Permanent Marker', serif;
+    background-color: #000000;
+    color: var(--color-light-gray);
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the logo to cover 40% of the screen */
+img.logo {
+    width: 30vw; /* Adjust width to 40% of viewport width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--color-black); /* Black background */
+    color: var(--color-black); /* Yellow text color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Functions Section */
+#functions {
+    background-color: var(--color-gray-light); /* Light gray background for the functions section */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#functions pre {
+    background-color: var(--color-dark-gray); /* Dark gray background for the code */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Instructions Section */
+#instructions {
+    background-color: var(--color-gray-light); /* Light gray background for the instructions section */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.instruction {
+    margin-bottom: 20px;
+}
+
+.instruction h3 {
+    color: var(--color-red); /* Red color for section headings */
+    font-size: 2em; /* Larger font size */
+}
+
+.instruction p {
+    color: var(--color-black); /* Yellow text color */
+    font-size: 1.5em; /* Larger font size */
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-black); /* Black background */
+    color: var(--color-red); /* Yellow text color */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Center content and add some padding */
+#root {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--color-black); /* Black background for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings */
+h1 {
+    color: var(--color-red); /* Red color */
+    font-size: 3em; /* Larger font size */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: var(--color-red); /* Yellow color */
+    font-size: 2em; /* Larger font size */
+    margin-bottom: 15px;
+}
+
+/* Style buttons */
+button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em; /* Larger font size */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--color-blue-dark);
+}
+
+button:disabled {
+    background-color: var(--color-light-gray);
+    cursor: not-allowed;
+}
+
+/* Style input fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 1.2em; /* Larger font size */
+}
+
+/* Style div containers */
+div {
+    background-color: transparent;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style links */
+a {
+    color: var(--color-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style pre element to format JSON output */
+pre {
+    background-color: var(--color-light-gray);
+    border: 1px solid var(--color-dark-gray);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}

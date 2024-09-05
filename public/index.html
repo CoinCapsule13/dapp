@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CoinCapsule</title>
+    <!-- Link to the PNG favicon -->
+ <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <img src="logo.png" alt="CoinCapsule Logo" class="logo">
+    <div id="root"></div>
+
+    <h1>COINCAPSULE from ICONOCLAST</h1>
+
+    <button id="connectButton">Connect to MetaMask</button>
+
+    <div>
+        <h2>Mint Tokens</h2>
+        <input type="text" id="mintAmount" placeholder="Amount to mint">
+        <input type="text" id="mintLabel" placeholder="Mint label">
+        <button id="mintButton">Mint Tokens</button>
+    </div>
+
+    <div>
+        <h2>Get Token IDs</h2>
+        <input type="text" id="ownerAddress" placeholder="Owner Address">
+        <button id="getTokenIdsButton">Get Token IDs</button>
+        <pre id="tokenIdsOutput"></pre>
+    </div>
+
+    <div>
+        <h2>Get Wallet Contents</h2>
+        <input type="text" id="tokenId" placeholder="Token ID">
+        <button id="getWalletContentsButton">Get Wallet Contents</button>
+        <pre id="walletContentsOutput"></pre>
+    </div>
+
+    <div>
+        <h2>Freeze Wallet</h2>
+        <input type="text" id="freezeTokenId" placeholder="Token ID">
+        <input type="password" id="freezePassword" placeholder="Password">
+        <button id="freezeButton">Freeze Wallet</button>
+    </div>
+
+    <div>
+        <h2>Unfreeze Wallet</h2>
+        <input type="text" id="unfreezeTokenId" placeholder="Token ID">
+        <input type="password" id="unfreezePassword" placeholder="Password">
+        <button id="unfreezeButton">Unfreeze Wallet</button>
+    </div>
+
+    <div>
+        <h2>Deposit ETH</h2>
+        <input type="text" id="depositTokenId" placeholder="Token ID">
+        <input type="text" id="ethAmount" placeholder="ETH amount">
+        <button id="depositETHButton">Deposit ETH</button>
+    </div>
+
+    <div>
+        <h2>Withdraw ETH</h2>
+        <input type="text" id="withdrawTokenId" placeholder="Token ID">
+        <input type="text" id="withdrawAmount" placeholder="Amount">
+        <button id="withdrawETHButton">Withdraw ETH</button>
+    </div>
+
+    <div>
+        <h2>Deposit ERC20</h2>
+        <input type="text" id="depositERC20TokenId" placeholder="Token ID">
+        <input type="text" id="erc20Address" placeholder="ERC20 Token Address">
+        <input type="text" id="erc20Amount" placeholder="ERC20 Amount">
+        <button id="depositERC20Button">Deposit ERC20</button>
+    </div>
+
+    <div>
+        <h2>Withdraw ERC20</h2>
+        <input type="text" id="withdrawERC20TokenId" placeholder="Token ID">
+        <input type="text" id="erc20WithdrawAddress" placeholder="ERC20 Token Address">
+        <input type="text" id="erc20WithdrawAmount" placeholder="ERC20 Amount">
+        <button id="withdrawERC20Button">Withdraw ERC20</button>
+    </div>
+
+    <div>
+        <h2>Deposit ERC721</h2>
+        <input type="text" id="depositERC721TokenId" placeholder="Token ID">
+        <input type="text" id="erc721Address" placeholder="ERC721 NFT Address">
+        <input type="text" id="erc721Id" placeholder="ERC721 NFT ID">
+        <button id="depositERC721Button">Deposit ERC721</button>
+    </div>
+
+    <div>
+        <h2>Withdraw ERC721</h2>
+        <input type="text" id="withdrawERC721TokenId" placeholder="Token ID">
+        <input type="text" id="erc721WithdrawAddress" placeholder="ERC721 NFT Address">
+        <input type="text" id="erc721WithdrawId" placeholder="ERC721 NFT ID">
+        <button id="withdrawERC721Button">Withdraw ERC721</button>
+    </div>
+
+    <div>
+        <h2>Change Label</h2>
+        <input type="text" id="changeLabelTokenId" placeholder="Token ID">
+        <input type="text" id="newLabel" placeholder="New Label">
+        <button id="changeLabelButton">Change Label</button>
+    </div>
+
+    <div>
+        <h2>Transfer Token</h2>
+        <input type="text" id="transferTokenId" placeholder="Token ID">
+        <input type="text" id="transferRecipient" placeholder="Recipient Address">
+        <button id="transferTokenButton">Transfer Token</button>
+    </div>
+
+    <div id="instructions">
+        <h2>User Instructions</h2>
+        <div class="instruction">
+            <h3>1. Introduction</h3>
+            <p>Your app allows users to interact with the Coincapsule smart contract for managing their wallets, minting tokens, and performing transactions. Follow these steps to use the app effectively.</p>
+        </div>
+        <div class="instruction">
+            <h3>2. Getting Started</h3>
+            <p>1. <strong>Access the App:</strong> Open your web browser and navigate to the URL where your app is hosted.</p>
+            <p>2. <strong>Connect Wallet:</strong> Click on the "Connect to MetaMask" button. Choose MetaMask from the available options and follow the prompts to connect your wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>3. Mint Tokens</h3>
+            <p>1. <strong>Navigate to Minting Section:</strong> Find and click on the "Mint Tokens" section.</p>
+            <p>2. <strong>Enter Details:</strong> Input the number of tokens you wish to mint and provide a label for your new wallet.</p>
+            <p>3. <strong>Pay Minting Fee:</strong> Ensure you have enough ETH in your wallet to cover the minting fee (0.00005 ETH per token). The total fee will be calculated and displayed for confirmation.</p>
+            <p>4. <strong>Mint Tokens:</strong> Click the "Mint Tokens" button to initiate the minting process. Confirm the transaction in MetaMask and wait for the process to complete.</p>
+        </div>
+        <div class="instruction">
+            <h3>4. Get Token IDs</h3>
+            <p>1. <strong>Enter Owner Address:</strong> Input the Ethereum address of the wallet you want to query.</p>
+            <p>2. <strong>Fetch Token IDs:</strong> Click the "Get Token IDs" button to retrieve and display the token IDs associated with the address.</p>
+        </div>
+        <div class="instruction">
+            <h3>5. Get Wallet Contents</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the token whose contents you want to view.</p>
+            <p>2. <strong>Fetch Contents:</strong> Click the "Get Wallet Contents" button to display the contents of the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>6. Freeze Wallet</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet you want to freeze.</p>
+            <p>2. <strong>Enter Password:</strong> Provide the password for authorization.</p>
+            <p>3. <strong>Freeze Wallet:</strong> Click the "Freeze Wallet" button to prevent further transactions from the wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>7. Unfreeze Wallet</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet you want to unfreeze.</p>
+            <p>2. <strong>Enter Password:</strong> Provide the password for authorization.</p>
+            <p>3. <strong>Unfreeze Wallet:</strong> Click the "Unfreeze Wallet" button to allow transactions from the wallet again.</p>
+        </div>
+        <div class="instruction">
+            <h3>8. Deposit ETH</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet to which you want to deposit ETH.</p>
+            <p>2. <strong>Enter ETH Amount:</strong> Provide the amount of ETH you want to deposit.</p>
+            <p>3. <strong>Deposit ETH:</strong> Click the "Deposit ETH" button to transfer ETH to the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>9. Withdraw ETH</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet from which you want to withdraw ETH.</p>
+            <p>2. <strong>Enter Amount:</strong> Provide the amount of ETH you want to withdraw.</p>
+            <p>3. <strong>Withdraw ETH:</strong> Click the "Withdraw ETH" button to transfer ETH from the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>10. Deposit ERC20</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet to which you want to deposit ERC20 tokens.</p>
+            <p>2. <strong>Enter ERC20 Token Address:</strong> Provide the contract address of the ERC20 token.</p>
+            <p>3. <strong>Enter Amount:</strong> Provide the amount of ERC20 tokens you want to deposit.</p>
+            <p>4. <strong>Deposit ERC20:</strong> Click the "Deposit ERC20" button to transfer tokens to the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>11. Withdraw ERC20</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet from which you want to withdraw ERC20 tokens.</p>
+            <p>2. <strong>Enter ERC20 Token Address:</strong> Provide the contract address of the ERC20 token.</p>
+            <p>3. <strong>Enter Amount:</strong> Provide the amount of ERC20 tokens you want to withdraw.</p>
+            <p>4. <strong>Withdraw ERC20:</strong> Click the "Withdraw ERC20" button to transfer tokens from the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>12. Deposit ERC721</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet to which you want to deposit an ERC721 NFT.</p>
+            <p>2. <strong>Enter ERC721 NFT Address:</strong> Provide the contract address of the ERC721 NFT.</p>
+            <p>3. <strong>Enter NFT ID:</strong> Provide the ID of the ERC721 NFT you want to deposit.</p>
+            <p>4. <strong>Deposit ERC721:</strong> Click the "Deposit ERC721" button to transfer the NFT to the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>13. Withdraw ERC721</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the wallet from which you want to withdraw an ERC721 NFT.</p>
+            <p>2. <strong>Enter ERC721 NFT Address:</strong> Provide the contract address of the ERC721 NFT.</p>
+            <p>3. <strong>Enter NFT ID:</strong> Provide the ID of the ERC721 NFT you want to withdraw.</p>
+            <p>4. <strong>Withdraw ERC721:</strong> Click the "Withdraw ERC721" button to transfer the NFT from the specified wallet.</p>
+        </div>
+        <div class="instruction">
+            <h3>14. Change Label</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the token for which you want to change the label.</p>
+            <p>2. <strong>Enter New Label:</strong> Provide the new label for the token.</p>
+            <p>3. <strong>Change Label:</strong> Click the "Change Label" button to update the label.</p>
+        </div>
+        <div class="instruction">
+            <h3>15. Transfer Token</h3>
+            <p>1. <strong>Enter Token ID:</strong> Input the ID of the token you want to transfer.</p>
+            <p>2. <strong>Enter Recipient Address:</strong> Provide the Ethereum address of the recipient.</p>
+            <p>3. <strong>Transfer Token:</strong> Click the "Transfer Token" button to initiate the transfer.</p>
+        </div>
+    </div>
+
+      <footer>
+        <p>Build Defi Together:</p>
+        <ul>
+            <li><a href="https://github.com/CoinCapsule13" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://t.me/thecoincapsule" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+            <li><a href="mailto:coincapsule13@gmail.com">Email</a></li>
+        </ul>
+    </footer>
+
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+    <script src="app.js"></script>
+    <script src="connectMetamask.js"></script>
+</body>
+</html>
